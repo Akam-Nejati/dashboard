@@ -5,10 +5,10 @@ import { useRoute } from 'vue-router';
 import NavBar from './Navbar/navBar.vue';
 import sideBarState from "./../states/navbar.ts"
 import Search from './Navbar/search.vue';
+import windowSizeState from '../states/windowSize';
 
 
-
-const windowSize = ref<number>(window.innerWidth)
+const windowSize = windowSizeState.windowSize
 const sidebar = sideBarState.sideBar
 const route = useRoute()
 const pageNow = route.name
@@ -26,12 +26,7 @@ routeItems.value.push({
     label: route.name as string
 })
 
-window.addEventListener("resize", () => {
-    windowSize.value = window.innerWidth
-    if (windowSize.value > 1400) {
-        sidebar.value = false
-    }
-})
+
 </script>
 
 
@@ -87,7 +82,7 @@ window.addEventListener("resize", () => {
                 <div class="w-full flex justify-content-between flex-row">
                     <div>
                         <Breadcrumb :home="home" :model="routeItems" />
-                        <p class="text-xl font-bold mt-2 mb-0 text-gray-100">{{ route.name }}</p>
+                        <p class="font-bold mt-2 mb-0 text-gray-100">{{ route.name }}</p>
                     </div>
                     <div>
                         <NavBar :disable_search="true" v-if="windowSize < 500"/>

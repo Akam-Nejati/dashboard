@@ -3,11 +3,13 @@ import { ref } from "vue";
 import type { Notfications } from "../../types/Notfications.interface"
 import sideBarState from "./../../states/navbar.ts"
 import Search from "./search.vue";
+import windowSizeState from '../../states/windowSize';
+
 
 const props = defineProps<{
   disable_search?: Boolean
 }>()
-
+const windowSize = windowSizeState.windowSize
 const op = ref<any>()
 const sidebar = sideBarState.sideBar
 const toggle = (event: any) => {
@@ -38,7 +40,7 @@ const notfications: Notfications[] = [
 <template>
   <div class="navbar flex justify-content-between md:justify-content-end align-items-center mb-4 md:mb-0 w-full">
     <div class="search mr-4">
-      <Search v-if="!props.disable_search"/>
+      <Search v-if="!props.disable_search" />
     </div>
     <div class="flex">
       <div class="cursor-pointer mr-3">
@@ -59,9 +61,10 @@ const notfications: Notfications[] = [
         </OverlayPanel>
       </div>
       <div class="cursor-pointer">
-        <i :class="{ hidden: false }" class="pi pi-align-justify text-xl mr-3 text-gray-200" @click="sidebar = true"></i>
+        <i :class="{ 'hidden': windowSize > 1400}" class="pi pi-align-justify text-xl mr-3 text-gray-200" @click="sidebar = true"></i>
+      </div>
+      <div class="cursor-pointer">
         <i class="pi pi-user text-xl mr-2 text-gray-200" style="font-size: 2.5rem"></i>
-        <span class="text-gray-200">sign in</span>
       </div>
     </div>
   </div>
