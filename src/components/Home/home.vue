@@ -34,7 +34,7 @@ const siteInformation: SiteInformation[] = [
 <template>
     <div class="home">
         <div class="mt-4 grid">
-            <div v-for="(item, index) in siteInformation" :key="index" class="col-12 sm:col-6 md:col-3">
+            <div v-for="(item, index) in siteInformation" :key="index" class="col-12 sm:col-6 lg:col-3">
                 <div class="flex justify-content-between align-items-center px-4 py-3 bg-gray-800 border-round-xl shadow-sm">
                     <div class="flex flex-column">
                         <span class="text-gray-200">{{ item.title }}</span>
@@ -46,8 +46,8 @@ const siteInformation: SiteInformation[] = [
                 </div>
             </div>
         </div>
-        <div class="mt-4 gap-4 flex justify-content-between flex-column md:flex-row">
-            <div class="md:w-7 gap-4 flex-column-reverse sm:flex-row w-full p-4 bg-gray-800 border-round-xl flex justify-content-between shadow-sm">
+        <div class="mt-4 gap-4 flex justify-content-between flex-column lg:flex-row">
+            <div class="lg:w-7 gap-4 flex-column-reverse sm:flex-row w-full p-4 bg-gray-800 border-round-xl flex justify-content-between shadow-sm">
                 <div class="flex flex-column justify-content-between">
                     <div class="flex flex-column">
                         <span class="text-gray-200">Built by developers</span>
@@ -60,11 +60,11 @@ const siteInformation: SiteInformation[] = [
                         <i class="pi pi-arrow-right ml-3 text-gray-200"></i>
                     </div>
                 </div>
-                <div class="xl:w-20rem md:w-50rem sm:w-full bg-green-500 border-round-xl">
+                <div class="xl:w-20rem lg:w-50rem sm:w-full bg-green-500 border-round-xl">
                     <img class="rocket-img w-full h-full" src="../../assets/Images/rocket-white.b63e5d40.png" alt="">
                 </div>
             </div>
-            <div class="md:w-5 w-full p-4 bg-gray-800 border-round-xl shadow-sm">
+            <div class="lg:w-5 w-full p-4 bg-gray-800 border-round-xl shadow-sm">
                 <div
                     class="work-with-the-rocket bg-cover h-full border-round-xl flex flex-column justify-content-between p-4">
                     <div class="flex flex-column justify-content-between">
@@ -88,9 +88,9 @@ const siteInformation: SiteInformation[] = [
                 <GradientLineChart />
             </div>
         </div>
-        <div class="mt-4 flex gap-4 flex-column md:flex-row">
-            <Table class="w-full md:w-8" />
-            <OrdersOverview class="w-full  md:w-4" />
+        <div class="mt-4 flex gap-4 flex-column lg:flex-row">
+            <Table class="w-full lg:w-8" />
+            <OrdersOverview class="w-full  lg:w-4" />
         </div>
     </div>
 </template>
