@@ -1,5 +1,5 @@
 import { ref } from "vue"
-import sideBarState from "./../states/navbar.ts"
+import sideBarState from "./sideBar.ts"
 
 const sidebar = sideBarState.sideBar
 const windowSize = ref<number>(window.innerWidth)

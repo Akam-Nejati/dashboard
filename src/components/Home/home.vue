@@ -35,7 +35,8 @@ const siteInformation: SiteInformation[] = [
     <div class="home">
         <div class="mt-4 grid">
             <div v-for="(item, index) in siteInformation" :key="index" class="col-12 sm:col-6 lg:col-3">
-                <div class="flex justify-content-between align-items-center px-4 py-3 bg-gray-800 border-round-xl shadow-sm">
+                <div
+                    class="flex justify-content-between align-items-center px-4 py-3 bg-gray-800 border-round-xl shadow-sm">
                     <div class="flex flex-column">
                         <span class="text-gray-200">{{ item.title }}</span>
                         <span class="mt-2 font-bold text-xl text-gray-100">{{ item.statistics }}</span>
@@ -47,7 +48,8 @@ const siteInformation: SiteInformation[] = [
             </div>
         </div>
         <div class="mt-4 gap-4 flex justify-content-between flex-column lg:flex-row">
-            <div class="lg:w-7 gap-4 flex-column-reverse sm:flex-row w-full p-4 bg-gray-800 border-round-xl flex justify-content-between shadow-sm">
+            <div
+                class="lg:w-7 gap-4 flex-column-reverse sm:flex-row w-full p-4 bg-gray-800 border-round-xl flex justify-content-between shadow-sm">
                 <div class="flex flex-column justify-content-between">
                     <div class="flex flex-column">
                         <span class="text-gray-200">Built by developers</span>
@@ -112,7 +114,7 @@ const siteInformation: SiteInformation[] = [
     background-image: url('../../assets/Images/ivancik.png');
 }
 
-.item-width{
+.item-width {
     width: calc(50% - 14px) !important;
 }
 </style>

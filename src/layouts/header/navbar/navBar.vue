@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { ref } from "vue";
-import type { Notfications } from "../../types/Notfications.interface"
-import sideBarState from "./../../states/navbar.ts"
+import type { Notfications } from "../../../types/Notfications.interface"
+import sideBarState from "../../../states/sideBar"
 import Search from "./search.vue";
-import windowSizeState from '../../states/windowSize';
+import windowSizeState from '../../../states/windowSize';
 
 
 const props = defineProps<{
@@ -61,7 +61,8 @@ const notfications: Notfications[] = [
         </OverlayPanel>
       </div>
       <div class="cursor-pointer">
-        <i :class="{ 'hidden': windowSize > 1400}" class="pi pi-align-justify text-xl mr-3 text-gray-200" @click="sidebar = true"></i>
+        <i :class="{ 'hidden': windowSize > 1400 }" class="pi pi-align-justify text-xl mr-3 text-gray-200"
+          @click="sidebar = true"></i>
       </div>
       <div class="cursor-pointer">
         <i class="pi pi-user text-xl mr-2 text-gray-200" style="font-size: 2.5rem"></i>
