@@ -1,6 +1,6 @@
 ## preview
+![Screenshot from 2023-05-22 14-38-18](https://github.com/Akam-Nejati/dashboard/assets/106558616/ad9da64a-71da-4fac-81c0-b380415190fa)
 
-![Screenshot from 2023-05-22 12-44-31](https://github.com/Akam-Nejati/dashboard/assets/106558616/ef469e1c-44be-478d-9756-d033888ee6d4)
 [preview](https://dashboard-admin-app.netlify.app)
 ## Setup
 
