@@ -11,7 +11,7 @@ const route = useRoute()
 const pageNow = route.name
 
 const sideBarItems = ref<MenuItem[]>([
-    { label: 'Home', icon: 'pi pi-home', class: pageNow === "index" ? "p-focus" : " " },
+    { label: 'Home', icon: 'pi pi-home', class: pageNow === "Home" ? "bg-gray-700 border-round-xl" : "" },
     { label: 'Delete', icon: 'pi pi-fw pi-trash' }
 ]);
 const routeItems = ref<MenuItem[]>([]);
