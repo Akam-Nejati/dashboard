@@ -7,7 +7,7 @@ const props = defineProps<{
 
 <template>
     <span class="p-input-icon-left grid" :class="props.span_class">
-        <i class="pi pi-search" />
-        <InputText placeholder="Search" class="col-12"  :iclass="props.input_class"/>
+    <i class="pi pi-search" />
+        <InputText placeholder="Search" class="col-12 bg-gray-800 border-round-3xl" :iclass="props.input_class" />
     </span>
 </template>
